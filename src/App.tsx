@@ -1,11 +1,11 @@
 import Quill from 'quill'
-import { Timer } from './components/timer'
+import { Timer } from './components/Timer'
 
 function App() {
 
   return (
     <div>
-      <Timer startTime = {60} />
+      <Timer startTime = {10} />
     </div>
   )
 }

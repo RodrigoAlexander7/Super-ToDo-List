@@ -12,13 +12,15 @@ export function Timer({startTime}:TimerProps) {
    useEffect(()=>{
       if(!stop){
          const id = setInterval(()=>{
-            setTime((s)=> s - 1);
-            if(time <= 1){
-               clearInterval(id);
-               setStop(true);
-               setTime(startTime);
-            } 
-         }, 10)
+            setTime((s)=> {
+               if (s <= 0){
+                  clearInterval(id);
+                  setStop(true);
+                  return startTime
+               }
+               return s - 1
+            });
+         }, 1000)
 
          return ()=> clearInterval(id);
       }
