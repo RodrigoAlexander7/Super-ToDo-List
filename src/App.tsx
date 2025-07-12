@@ -1,6 +1,3 @@
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./app/layout";
 import { TextEditor } from "./components/TextEditor";
