@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main>
+      <main className="flex-1 p-4 max-w-full overflow-hidden break-words">
         <SidebarTrigger />
         {children}
       </main>

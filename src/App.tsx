@@ -1,20 +1,21 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
 import { SidebarTrigger } from "@/components/ui/sidebar";
-
-
+import { Routes, Route } from "react-router-dom";
+import Layout from "./app/layout";
+import { TextEditor } from "./components/TextEditor";
 
 function App() {
   return (
-    <SidebarProvider>
-      <div className="flex">
-        <AppSidebar />
 
-        <main className="flex-1 p-4">
-          <SidebarTrigger /> 
-        </main>
-      </div>
-    </SidebarProvider>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<div>Wellcome to Awesome TDList</div>} />
+        <Route path="/editor" element={<TextEditor />} />
+    </Routes>
+    </Layout>
+
+
   );
 }
 
