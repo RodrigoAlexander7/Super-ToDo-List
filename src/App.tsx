@@ -1,14 +1,21 @@
-import { TextEditor } from './components/TextEditor'
-import { Timer } from './components/Timer'
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
+import { SidebarTrigger } from "@/components/ui/sidebar";
+
+
 
 function App() {
-
   return (
-    <div>
-      <Timer startTime = {10} />
-      <TextEditor></TextEditor>
-    </div>
-  )
+    <SidebarProvider>
+      <div className="flex">
+        <AppSidebar />
+
+        <main className="flex-1 p-4">
+          <SidebarTrigger /> 
+        </main>
+      </div>
+    </SidebarProvider>
+  );
 }
 
-export default App
+export default App;
