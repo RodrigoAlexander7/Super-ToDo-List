@@ -18,7 +18,7 @@ export function Timer({startTime}:TimerProps) {
                   setStop(true);
                   return startTime
                }
-               return s - 1
+               return s + 1
             });
          }, 1000)
 

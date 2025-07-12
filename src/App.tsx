@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<div>Wellcome to Awesome TDList</div>} />
         <Route path="/editor" element={<TextEditor />} />
-        <Route path="/timer" element={<Timer startTime={10}/>} />
+        <Route path="/timer" element={<Timer startTime={12*60+180}/>} />
     </Routes>
     </Layout>
 
